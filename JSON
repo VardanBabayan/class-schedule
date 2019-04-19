@@ -25,7 +25,7 @@
 			"417E": 40
 		},
 
-		"working_days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "Suturday"],
+		"working_days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "Saturday"],
 		"working_hours": {
 			"starting_hour": "08:00",
 			"ending_hour": "21:00"
