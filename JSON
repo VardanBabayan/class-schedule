@@ -1,2 +1,36 @@
-{'scheduler':{'class_type': {'master':['class_1', 'class_2'], 'bachelor':['class_4', 'class_5', 'class_6', 'class_7']}
-      'classroom': {'401E': 30, '402E': 50, '403E': 20, '404E': 30, '405E': 45, '406E': 35, '407E': 45, '408E': 30, '409E': 40, '410E': 25, '411E': 25, '412E': 35, '413E': 25, '414E': 50, '415E': 45, '416E': 45, '417E': 40}, 'working_days': ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY'],'working_hours': {'starting_hour : '08:00', ending_hour : '21:00'}
+{
+	"scheduler": {
+		"class_type": {
+			"master": ["year_1", "year_2"],
+			"bachelor": ["year_1", "year_2", "year_3", "year_4"]
+		},
+
+		"classroom": {
+			"401E": 30,
+			"402E": 50,
+			"403E": 20,
+			"404E": 30,
+			"405E": 45,
+			"406E": 35,
+			"407E": 45,
+			"408E": 30,
+			"409E": 40,
+			"410E": 25,
+			"411E": 25,
+			"412E": 35,
+			"413E": 25,
+			"414E": 50,
+			"415E": 45,
+			"416E": 45,
+			"417E": 40
+		},
+
+		"working_days": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "Suturday"],
+		"working_hours": {
+			"starting_hour": "08:00",
+			"ending_hour": "21:00"
+		}
+
+
+	}
+}
