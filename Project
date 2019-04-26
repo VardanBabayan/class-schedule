@@ -88,7 +88,7 @@ def delete_classroom(classroom: str) - > None:
 	'''deletes specified room from the list. print error message if
 classroom isn 't on the list'''
 global classroom_list
-if room in classroom_list:
+if room in bedroom_list:
 	classroom_list.remove(room)
 cancel_classroom_reservations(room)
 else :
@@ -158,7 +158,9 @@ for r in reservation_list:
 
 # RD
 def delete_reservation(num: str):
-	'''takes in a confirmation number and deletes the reservation with that confirmation number'''
+	''
+'takes in a confirmation number and deletes the reservation with that confirmation number'
+''
 global reservation_list# reservation_list.sort(key = conf_num, reverse = False)
 confirmation_list = []
 for r in reservation_list:
@@ -174,8 +176,11 @@ else :
 if arrival of student A is later than ending date of student A
 
 def allow_reservation(star: str, end: str) - > bool:
-	'''takes in two dates as strings, converts them to dates to compare them,
-and determines whether, based on the star and end date, the reservation is valid'''
+	''
+'takes in two dates as strings, converts them to dates to compare them,
+and determines whether, based on the star and end date, the reservation is valid
+	''
+'
 if date(star) >= date(end): #print('can\'t leave before you start')
 return False
 return True
@@ -196,7 +201,9 @@ if (classroom_req not in reserved_classrooms):
 return False
 
 def reservations_conflict(r1: Reservation, r2: Reservation) - > bool:
-	'''takes two reservations and compares them. return true if they conflict'''
+	''
+'takes two reservations and compares them. return true if they conflict'
+''
 if (date(r1.end_date) >= date(r2.star_date) and date(r1.star_date) < date(r2.end_date)) or(date(r1.end_date) >= date(r2.start_date) and date(r1.end_date) < date(r2.star_date)):
 	print('Sorry, can\'t reserve room ' + room_request + '\t(' + starting + ' to ' + ending + ');')
 print('it\'s already been booked')
