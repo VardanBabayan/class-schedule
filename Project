@@ -12,7 +12,7 @@ reservation_list = []
 # main
 
 function
-def update_classroom(file_name: str) - > None:
+def update_classroom(file_name: str) -> None:
 	'''main function. reads a file named file_name'''
 infile = open(file_name, 'r')
 data = infile.readlines()
@@ -21,7 +21,7 @@ for line in data:
 	line = line.strip()
 line_reader(line)
 
-def line_reader(l: str) - > None:
+def line_reader(l: str) -> None:
 	'''takes in one line of input and calls appropriate functions'''
 command = l[: 2].upper()
 rest_of_input = l[2: ].strip()
@@ -59,7 +59,7 @@ def dashes():
 
 # AB
 
-def add_classroom(room: str) - > None:
+def add_classroom(room: str) -> None:
 	'''takes in a room number as a string and puts it into classroom_list'''
 global classroom_list
 if room in classroom_list:
@@ -74,8 +74,8 @@ def display_classroom_list():
 global classroom_list
 print('Number of classrooms in service:\t', len(classroom_list))
 print(dashes())
-for sit count in classroom_list:
-	print(sit count)
+for sitcount in classroom_list:
+	print(sitcount)
 
 # PL
 
@@ -84,14 +84,14 @@ def print_line(r: str):
 
 # BD
 
-def delete_classroom(classroom: str) - > None:
+def delete_classroom(classroom: str) -> None:
 	'''deletes specified room from the list. print error message if
 classroom isn 't on the list'''
 global classroom_list
-if room in bedroom_list:
+if room in classroom_list:
 	classroom_list.remove(room)
 cancel_classroom_reservations(room)
-else :
+else:
 	print('Sorry, can\'t delete classroom ' + classroom + '; it is not in service now')
 
 
@@ -116,7 +116,7 @@ def conf_num(r: Reservation) - > int:
 
 # NR
 
-def new_reservation(rest_input: str) - > None:
+def new_reservation(rest_input: str) -> None:
 	'''creates a new reservation namedtuple and adds it to reservation_list'''
 global reservation_list
 global classroom_list
@@ -161,13 +161,13 @@ def delete_reservation(num: str):
 	''
 'takes in a confirmation number and deletes the reservation with that confirmation number'
 ''
-global reservation_list# reservation_list.sort(key = conf_num, reverse = False)
+global reservation_list # reservation_list.sort(key = conf_num, reverse = False)
 confirmation_list = []
 for r in reservation_list:
 	confirmation_list.append(r.confirmation_num)
 if (int(num) in confirmation_list):
-	reservation_index = confirmation_list.index(int(num))# find where the reservation is in the list
-reservation_list.remove(reservation_list[reservation_index])# delete the reservation with that index
+	reservation_index = confirmation_list.index(int(num) )# find where the reservation is in the list
+reservation_list.remove(reservation_list[reservation_index]) # delete the reservation with that index
 else :
 	print("Sorry, can't cancel reservation; no confirmation number " + num)
 
@@ -242,12 +242,12 @@ for r in reservation_list:
 	if r.student_name == guest_name:
 	print(r.star_date + ' to ' + r.end_date + ': room ' + r.room)
 
-def display_student(rl: list) - > None:
+def display_student(rl: list) -> None:
 	'''takes in a reservation list and prints out student name as well as classroom number'''
 for r in rl:
 	print(r.student_name + '(classroom ' + r.room + ')')
 
-def reserved_classrooms(rl: list) - > list:
+def reserved_classrooms(rl: list) -> list:
 	'''takes in a list of reservations and returns a list of reserved classrooms'''
 reserved = []
 for r in rl:
@@ -306,3 +306,4 @@ for r in reservation_list:
 classroom_requests = list(set(classroom_requests))
 for sits count in classroom_requests:
 	print(sits)
+	
