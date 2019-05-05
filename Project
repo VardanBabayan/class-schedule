@@ -91,7 +91,7 @@ global classroom_list
 if room in classroom_list:
 	classroom_list.remove(room)
 cancel_classroom_reservations(room)
-else:
+else :
 	print('Sorry, can\'t delete classroom ' + classroom + '; it is not in service now')
 
 
