@@ -95,7 +95,7 @@ else :
 	print('Sorry, can\'t delete classroom ' + classroom + '; it is not in service now')
 
 
-def compare_date(date1: str, date2: str) - > bool:
+def compare_date(date1: str, date2: str) -> bool:
 	'''compares two dates. returns true if date 2 is after date 1'''
 date1 = date1.split('/')
 date_1 = datetime.date(int(date1[2]), int(date1[0]), int(date1[1]))
@@ -106,12 +106,12 @@ if date_2 > date_1:
 else :
 	return False
 
-def date(date: str) - > int:
+def date(date: str) -> int:
 	date = date.split('/')
 result = datetime.date(int(date[2]), int(date[0]), int(date[1]))
 return result
 
-def conf_num(r: Reservation) - > int:
+def conf_num(r: Reservation) -> int:
 	return r.confirmation_num
 
 # NR
