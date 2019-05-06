@@ -158,9 +158,7 @@ for r in reservation_list:
 
 # RD
 def delete_reservation(num: str):
-	''
-'takes in a confirmation number and deletes the reservation with that confirmation number'
-''
+	'''takes in a confirmation number and deletes the reservation with that confirmation number'''
 global reservation_list # reservation_list.sort(key = conf_num, reverse = False)
 confirmation_list = []
 for r in reservation_list:
